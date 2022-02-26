@@ -1,0 +1,10 @@
+version: 2
+
+sources:
+
+  - name: ae-recruitment-sandbox2 # name of the source 
+    schema: ae-recruitment-sandbox2 # this is the schema our raw data lives in
+    database: ae-recruitment-sandbox2 # this is the name of our database
+
+
+       

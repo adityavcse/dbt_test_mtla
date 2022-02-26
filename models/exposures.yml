@@ -1,0 +1,17 @@
+version: 2
+
+exposures:
+  
+  - name: customer report
+    type: dashboard
+    maturity: low
+    description: >
+      The dashboard contains the customer purchase details
+    
+    depends_on:
+      - ref('dim_customer')
+      
+      
+    owner:
+      name: Aditya V 
+      email: adityavcse@gmail.com

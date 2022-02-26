@@ -1,0 +1,39 @@
+version: 2
+
+models:
+  - name: int_customer_agg
+    description: This tables contains the aggregate of order  details at the customer level
+    columns: 
+      - name: customer_unique_id
+        description: unique ide to identify a customer
+        tests:
+          - unique
+          - not_null
+      - name: num_orders
+        description: number of orders made by the customer
+        tests:
+          - positive_values
+      - name: total_orders_value
+        description: total order value of the customer
+        tests: 
+          - positive_values
+      - name: first_order_date
+        description: date when the customer made the first order
+      - name: last_order_date
+        description: date when the customer made his latest order
+      - name: max_item_price
+        description: max price of the item purchased by the customer
+  
+  - name: int_order_agg
+    description: This table contains order information aggreagated at the order level
+    columns:
+      - name: customer_unique_id
+        description: unique ide to identify a customer
+        tests:
+          - not_null
+      - name: order_id
+        description: unique id for the order
+      - name: order_price
+        description: price of the order aggregated sum of all items in the order
+      
+
