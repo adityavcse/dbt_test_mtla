@@ -17,4 +17,4 @@ with cust as
     
 )
 
-select * from cust
+select * from  cust
